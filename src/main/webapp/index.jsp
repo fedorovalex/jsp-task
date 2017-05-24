@@ -11,10 +11,8 @@
             String name = request.getParameter("name");
             String fam = request.getParameter("fam");
         %>
-        <%= name %>
-        ${empty name}
         <c:choose>
-            <c:when test="${empty name and empty fam}">
+            <c:when test="${empty param.name and empty param.fam}">
                 <h1>Hello World!</h1> <br>
             </c:when>
             <c:otherwise>
@@ -27,4 +25,5 @@
                 ${pageDate}
             </c:otherwise>
         </c:choose>
+        <br><a href="input.jsp">Введите свои данные</a>
 </html>
